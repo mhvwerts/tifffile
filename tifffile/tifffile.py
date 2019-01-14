@@ -1,5 +1,3 @@
-
-
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 # tifffile.py
@@ -8203,7 +8201,8 @@ def _replace_by(module_function, package=__package__, warn=None, prefix='_'):
     """Try replace decorated function by module.function."""
     def _warn(e, warn):
         if warn is None:
-            warn = '\n  Functionality might be degraded or be slow.\n'
+            warn = "\n  Functionality might be degraded or be slow.\n"\
+                   "  Speed-up module can be built using tifffile/build_c.py\n"
         elif warn is True:
             warn = ''
         elif not warn:
