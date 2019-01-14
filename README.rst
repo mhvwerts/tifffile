@@ -1,17 +1,25 @@
+
 =============================================================================================
-This repository is deprecated and not directly tied to the released package on PyPI.
+Fork of a former version of tifffile.py
 =============================================================================================
+
+This forks version 2018.06.15 of tifffile.py (by
+`Christoph Gohlke <https://www.lfd.uci.edu/~gohlke/>`_).
+It is the last version to be
+'self-contained' and portable, not having any dependencies other than 
+numpy and matplotlib, and the Python standard library. There is an optional C 
+module for speed-up, which can be readily compiled under
+Linux and Windows (and likely MacOS).
+
+The up-to-date version can be found at
+
+* `PyPI <https://pypi.org/project/tifffile/>`_
+* `C. Gohlke homepage <https://www.lfd.uci.edu/~gohlke/code/tifffile.py.html>`_
+
 
 ===============================
 Tifffile
 ===============================
-
-.. image:: https://badge.fury.io/py/tifffile.png
-    :target: http://badge.fury.io/py/tifffile
-
-.. image:: https://pypip.in/d/tifffile/badge.png
-        :target: https://pypi.python.org/pypi/tifffile
-
 
 Read and write image data from and to TIFF files.
 
@@ -40,25 +48,36 @@ For command line usage run ``python tifffile.py --help``
 :Organization:
   Laboratory for Fluorescence Dynamics, University of California, Irvine
 
-:Version: 2017.01.12
+:Version: 2018.06.15
 
 Requirements
 ------------
-* `CPython 2.7 or 3.4 <http://www.python.org>`_
-* `Numpy 1.11 <http://www.numpy.org>`_
-* `Matplotlib 1.5 <http://www.matplotlib.org>`_ (optional for plotting)
+* `CPython 3.6 64-bit <https://www.python.org>`_
+* `Numpy 1.14 <http://www.numpy.org>`_
+* `Matplotlib 2.2 <https://www.matplotlib.org>`_ (optional for plotting)
+* `Tifffile.c 2018.02.10 <https://www.lfd.uci.edu/~gohlke/>`_
+  (recommended for faster decoding of PackBits and LZW encoded strings)
+* `Tifffile_geodb.py 2018.02.10 <https://www.lfd.uci.edu/~gohlke/>`_
+  (optional enums for GeoTIFF metadata)
+* Python 2 requires 'futures', 'enum34', 'pathlib'.
 
 Installation
 ------------
-* If using conda, `conda install tifffile -c conda-forge`.
-* Otherwise, `pip install tifffile`.
+
+This fork is intended to be a portable Python module, that is simply copied
+where it is needed. It may be incorporated into a collection of tool
+modules.
+
+The only file that is necessary is 'tifffile.py', 
+which should be placed in the Python search path. Reading of
+certain TIFF files may be very slow; for speed-up also use the compiled
+version of 'tifffile.c' (compilation instructions can be found there),
+and copy the resulting '_tifffile' something into
+
 
 Notes
 -----
-This is a mirror of the code at http://www.lfd.uci.edu/~gohlke/code/tifffile.py.html.  For any development concerns, please email Christoph Gohlke at
-``cgohlke at uci.edu``.
-
-The API is not stable yet and might change between revisions.
+This is a an old, deprecated version of the code at http://www.lfd.uci.edu/~gohlke/code/tifffile.py.html.  
 
 Tested on little-endian platforms only.
 
