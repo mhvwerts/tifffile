@@ -5,13 +5,13 @@ Fork of a former version of tifffile.py
 
 This forks version 2018.06.15 of tifffile.py (by
 `Christoph Gohlke <https://www.lfd.uci.edu/~gohlke/>`_).
-It is the last version to be
+This version of ``tifffile`` is the last to be
 'self-contained' and portable, not having any dependencies other than 
 numpy and matplotlib, and the Python standard library. There is an optional C 
 module for speed-up, which can be readily compiled under
 Linux and Windows (and likely MacOS).
 
-The up-to-date version can be found at
+The modern, up-to-date ``tifffile`` can be found at
 
 * `PyPI <https://pypi.org/project/tifffile/>`_
 * `C. Gohlke homepage <https://www.lfd.uci.edu/~gohlke/code/tifffile.py.html>`_
@@ -77,7 +77,7 @@ and copy the resulting '_tifffile' something into
 
 Notes
 -----
-This is a an old, deprecated version of the code at http://www.lfd.uci.edu/~gohlke/code/tifffile.py.html.  
+This is a a former (officially deprecated) version of the code at http://www.lfd.uci.edu/~gohlke/code/tifffile.py.html.  
 
 Tested on little-endian platforms only.
 
